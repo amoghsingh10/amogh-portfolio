@@ -1,15 +1,18 @@
-# My Portfolio Wesbite - Overview 🚀
+# Amogh Singh - Portfolio 🚀
 
-This repository contains the open source version of my porfolio website.
-Do check it out!
+Welcome to the repository for my personal portfolio website!
 
-## Instructions 🛠️
+## About
 
-I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/
+This portfolio showcases my journey as a Full Stack Developer, highlighting my projects, achievements, and skills. It features a modern, interactive design built using React.
 
-**Techstack** - React, TypeScript, GSAP, ThreeJS, WebGL, HTML, Css, JavaScript
+## Techstack 🛠️
 
-![Portfolio-Preview](public/images/preview.png)
+- React
+- TypeScript
+- Node.js
+- Tailwind / CSS
+- Vite
 
 ## License
 
