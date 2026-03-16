@@ -1,0 +1,163 @@
+/* ── Skills Section ─────────────────────────────────────── */
+.techstack {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 80px 0 120px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Big heading like "My Work" */
+.skills-heading {
+  display: block;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0 0 60px 0;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.skills-heading span {
+  color: var(--accentColor);
+}
+
+/* ── Grid ────────────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.skill-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  padding: 32px 36px 28px;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease,
+              background 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+/* Radial glow from top-right on hover */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.3) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.04);
+  box-shadow: 0 20px 60px rgba(34, 211, 238, 0.08),
+              0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+/* ── Category heading ────────────────────────────────────── */
+.skill-category {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #22d3ee;
+  margin: 0 0 20px 0;
+}
+
+/* Accent line under category */
+.skill-category::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #22d3ee;
+  margin-top: 10px;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.skill-card:hover .skill-category::after {
+  width: 60px;
+}
+
+/* ── Tags ────────────────────────────────────────────────── */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: rgba(34, 211, 238, 0.18);
+  color: #ffffff;
+  border-color: rgba(34, 211, 238, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media screen and (min-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .techstack {
+    padding: 100px 0 140px;
+  }
+
+  .skills-heading {
+    font-size: 70px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .skills-heading {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills-heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
